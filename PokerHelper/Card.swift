@@ -8,16 +8,12 @@
 
 import Foundation
 
-class Card {
+class Card:Codable {
     let code: String
-    let color: String?
-    let value: String?
     //need to add an image for the UI
     
-    init(code: String, color: String?, value: String?) {
+    init(code: String) {
         self.code = code
-        self.color = color
-        self.value = value
     }
     
     var description: String {

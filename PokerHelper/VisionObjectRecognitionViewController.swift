@@ -113,7 +113,10 @@ class VisionObjectRecognitionViewController: ViewController {
 
             }
                 else {
-                    second.setup(card: Card(code: latestDetectedObjects.first?.identifier as! String, color: nil, value: nil))
+                    let filteredDetectedObjects = filterUniqueDetectedObjects(latestDetectedObjects)
+                    print(filteredDetectedObjects)
+                    //second.setup(card: Card(code: latestDetectedObjects.first?.identifier as! String, color: nil, value: nil))
+                    second.calculateOdds(c1: filteredDetectedObjects[0].identifier, c2: filteredDetectedObjects[1].identifier)
                 }
            
             self.present(second, animated: true,completion: nil)
@@ -124,7 +127,21 @@ class VisionObjectRecognitionViewController: ViewController {
 
         }   
     }
-
+    
+    func filterUniqueDetectedObjects(_ objects: [(identifier: String, confidence: VNConfidence)]) -> [(identifier: String, confidence: VNConfidence)] {
+        var seenIdentifiers = Set<String>()
+        var uniqueObjects = [(identifier: String, confidence: VNConfidence)]()
+        
+        for object in objects {
+            if !seenIdentifiers.contains(object.identifier) {
+                seenIdentifiers.insert(object.identifier)
+                uniqueObjects.append(object)
+            }
+        }
+        
+        return uniqueObjects
+    }
+    
     func updateLayerGeometry() {
         let bounds = rootLayer.bounds
         var scale: CGFloat
