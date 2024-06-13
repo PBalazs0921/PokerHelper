@@ -2,16 +2,17 @@ import UIKit
 import AVFoundation
 import Vision
 
-class VisionObjectRecognitionViewController: ViewController {
+class MenuViewController: ViewController {
     
     @IBOutlet weak var TestLabel: UILabel!
     
-    private var pauseViewController: PauseViewController?
+    private var pauseViewController: CameraViewController?
     private var isCapturingVideo = false
     private var detectionOverlay: CALayer! = nil
     private var requests = [VNRequest]()
     private var testLabel: UILabel!
     private var latestDetectedObjects = [(identifier: String, confidence: VNConfidence)]()
+    var GameData : PokerHandStats?
     
     @discardableResult
     func setupVision() -> NSError? {
@@ -106,7 +107,7 @@ class VisionObjectRecognitionViewController: ViewController {
             stopCaptureSession()
             isCapturingVideo = false
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let second = storyboard.instantiateViewController(withIdentifier: "PauseViewController") as! PauseViewController
+            let second = storyboard.instantiateViewController(withIdentifier: "PauseViewController") as! CameraViewController
             second.loadViewIfNeeded()
             if (latestDetectedObjects.isEmpty) 
             {
@@ -114,9 +115,24 @@ class VisionObjectRecognitionViewController: ViewController {
             }
                 else {
                     let filteredDetectedObjects = filterUniqueDetectedObjects(latestDetectedObjects)
-                    print(filteredDetectedObjects)
-                    //second.setup(card: Card(code: latestDetectedObjects.first?.identifier as! String, color: nil, value: nil))
-                    second.calculateOdds(c1: filteredDetectedObjects[0].identifier, c2: filteredDetectedObjects[1].identifier)
+                    // print(filteredDetectedObjects)
+                    if(filteredDetectedObjects.count==2){
+                        print("Detected cards:")
+                        print(filteredDetectedObjects[0].identifier)
+                        print(filteredDetectedObjects[1].identifier)
+                        //second.setup(card: Card(code: latestDetectedObjects.first?.identifier as! String, color: nil, value: nil))
+                        GameData = second.calculateOddsTemp(c1: filteredDetectedObjects[0].identifier, c2: filteredDetectedObjects[1].identifier)
+                        print("The stored data:")
+                        GameData?.setup()
+                        if let gameData = GameData {
+                            for test in gameData.handChances{
+                                print(test.toString())
+                            }
+                        } else {
+                            print("No game data available")
+                        }
+                    }
+
                 }
            
             self.present(second, animated: true,completion: nil)
@@ -213,5 +229,17 @@ class VisionObjectRecognitionViewController: ViewController {
             testLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             testLabel.heightAnchor.constraint(equalToConstant: 50)
         ])
+    }
+    
+    func resetGame(){
+        
+    }
+    
+    func scanHand(){
+        
+    }
+    
+    func scanCommunityCards(){
+        
     }
 }

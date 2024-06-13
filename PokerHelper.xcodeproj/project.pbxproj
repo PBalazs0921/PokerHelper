@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		AC1DE5322C060FEE00D90910 /* PokerOddsCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1DE5312C060FEE00D90910 /* PokerOddsCalculator.swift */; };
 		AC5713F42C0525E000168123 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5713F32C0525E000168123 /* Card.swift */; };
+		AC6ACE962C123DA6008F722A /* OddsCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6ACE952C123DA6008F722A /* OddsCalculator.swift */; };
+		AC6ACE982C12476F008F722A /* PokerHandStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6ACE972C12476F008F722A /* PokerHandStats.swift */; };
+		AC6ACE9A2C12478F008F722A /* HandChance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6ACE992C12478F008F722A /* HandChance.swift */; };
 		AC854F232C04D589006503BD /* ObjectDetectorDEFAULT.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AC854F222C04D589006503BD /* ObjectDetectorDEFAULT.mlmodel */; };
 		AC854F2D2C04FE4C006503BD /* PauseBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC854F2C2C04FE4C006503BD /* PauseBoard.storyboard */; };
-		AC854F2F2C04FEA6006503BD /* PauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC854F2E2C04FEA6006503BD /* PauseViewController.swift */; };
+		AC854F2F2C04FEA6006503BD /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC854F2E2C04FEA6006503BD /* CameraViewController.swift */; };
 		AC854F312C04FEEB006503BD /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC854F302C04FEEB006503BD /* UIViewController.swift */; };
-		AC9385532C083F2700687FAE /* PokerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9385522C083F2700687FAE /* PokerGame.swift */; };
 		ACAB9CCD2C0766550093EB01 /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = ACAB9CCC2C0766550093EB01 /* test.js */; };
 		ACAB9CE52C07A4320093EB01 /* bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = ACAB9CE42C07A4320093EB01 /* bundle.js */; };
 		ACAB9CE72C07A6BC0093EB01 /* bundle2.js in Resources */ = {isa = PBXBuildFile; fileRef = ACAB9CE62C07A6BC0093EB01 /* bundle2.js */; };
@@ -21,7 +23,7 @@
 		ACF7329B2C073E5800B9C43D /* omp in Resources */ = {isa = PBXBuildFile; fileRef = ACF7329A2C073E5800B9C43D /* omp */; };
 		FA4750CA20BF3F48003E19ED /* Breakfast Finder Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4750C920BF3F48003E19ED /* Breakfast Finder Logo.png */; };
 		FA68723920AA028000D82F25 /* ObjectDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FA68723820AA028000D82F25 /* ObjectDetector.mlmodel */; };
-		FAB417F62099308400494E9C /* VisionObjectRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB417F52099308400494E9C /* VisionObjectRecognitionViewController.swift */; };
+		FAB417F62099308400494E9C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB417F52099308400494E9C /* MenuViewController.swift */; };
 		FAD5009F1ED668B60074D713 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5009E1ED668B60074D713 /* AppDelegate.swift */; };
 		FAD500A11ED668B60074D713 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD500A01ED668B60074D713 /* ViewController.swift */; };
 		FAD500A41ED668B60074D713 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD500A21ED668B60074D713 /* Main.storyboard */; };
@@ -34,11 +36,13 @@
 		AC1DE5312C060FEE00D90910 /* PokerOddsCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerOddsCalculator.swift; sourceTree = "<group>"; };
 		AC428C992C070BD200996D5B /* testbundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = testbundle.js; sourceTree = "<group>"; };
 		AC5713F32C0525E000168123 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		AC6ACE952C123DA6008F722A /* OddsCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsCalculator.swift; sourceTree = "<group>"; };
+		AC6ACE972C12476F008F722A /* PokerHandStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerHandStats.swift; sourceTree = "<group>"; };
+		AC6ACE992C12478F008F722A /* HandChance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandChance.swift; sourceTree = "<group>"; };
 		AC854F222C04D589006503BD /* ObjectDetectorDEFAULT.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ObjectDetectorDEFAULT.mlmodel; sourceTree = "<group>"; };
 		AC854F2C2C04FE4C006503BD /* PauseBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PauseBoard.storyboard; sourceTree = "<group>"; };
-		AC854F2E2C04FEA6006503BD /* PauseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseViewController.swift; sourceTree = "<group>"; };
+		AC854F2E2C04FEA6006503BD /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		AC854F302C04FEEB006503BD /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		AC9385522C083F2700687FAE /* PokerGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerGame.swift; sourceTree = "<group>"; };
 		ACAB9CCC2C0766550093EB01 /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = test.js; path = PokerHelper/test.js; sourceTree = SOURCE_ROOT; };
 		ACAB9CE42C07A4320093EB01 /* bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bundle.js; sourceTree = "<group>"; };
 		ACAB9CE62C07A6BC0093EB01 /* bundle2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bundle2.js; sourceTree = "<group>"; };
@@ -48,7 +52,7 @@
 		E3CB966204CD821C6969C2A3 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		FA4750C920BF3F48003E19ED /* Breakfast Finder Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Breakfast Finder Logo.png"; sourceTree = SOURCE_ROOT; };
 		FA68723820AA028000D82F25 /* ObjectDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ObjectDetector.mlmodel; sourceTree = "<group>"; };
-		FAB417F52099308400494E9C /* VisionObjectRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisionObjectRecognitionViewController.swift; sourceTree = "<group>"; };
+		FAB417F52099308400494E9C /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		FAD5009B1ED668B60074D713 /* PokerHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokerHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD5009E1ED668B60074D713 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD500A01ED668B60074D713 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,9 +81,20 @@
 			path = LICENSE;
 			sourceTree = "<group>";
 		};
+		AC6ACE9B2C1249DC008F722A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC5713F32C0525E000168123 /* Card.swift */,
+				AC6ACE972C12476F008F722A /* PokerHandStats.swift */,
+				AC6ACE992C12478F008F722A /* HandChance.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		AC854F322C04FFDF006503BD /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				AC6ACE9B2C1249DC008F722A /* Model */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -145,7 +160,7 @@
 				AC854F222C04D589006503BD /* ObjectDetectorDEFAULT.mlmodel */,
 				FAD5009E1ED668B60074D713 /* AppDelegate.swift */,
 				FAD500A01ED668B60074D713 /* ViewController.swift */,
-				FAB417F52099308400494E9C /* VisionObjectRecognitionViewController.swift */,
+				FAB417F52099308400494E9C /* MenuViewController.swift */,
 				FAD500A21ED668B60074D713 /* Main.storyboard */,
 				FAD500A51ED668B60074D713 /* Assets.xcassets */,
 				AC428C992C070BD200996D5B /* testbundle.js */,
@@ -154,13 +169,12 @@
 				FA4750C920BF3F48003E19ED /* Breakfast Finder Logo.png */,
 				FAD500AA1ED668B60074D713 /* Info.plist */,
 				AC854F2C2C04FE4C006503BD /* PauseBoard.storyboard */,
-				AC854F2E2C04FEA6006503BD /* PauseViewController.swift */,
-				AC9385522C083F2700687FAE /* PokerGame.swift */,
+				AC854F2E2C04FEA6006503BD /* CameraViewController.swift */,
+				AC6ACE952C123DA6008F722A /* OddsCalculator.swift */,
 				ACF7329C2C073EEC00B9C43D /* EquityCalculatorWrapper.h */,
 				AC1DE5312C060FEE00D90910 /* PokerOddsCalculator.swift */,
 				ACAB9CE62C07A6BC0093EB01 /* bundle2.js */,
 				ACAB9CE42C07A4320093EB01 /* bundle.js */,
-				AC5713F32C0525E000168123 /* Card.swift */,
 			);
 			path = PokerHelper;
 			sourceTree = "<group>";
@@ -246,15 +260,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC854F312C04FEEB006503BD /* UIViewController.swift in Sources */,
-				FAB417F62099308400494E9C /* VisionObjectRecognitionViewController.swift in Sources */,
+				FAB417F62099308400494E9C /* MenuViewController.swift in Sources */,
+				AC6ACE9A2C12478F008F722A /* HandChance.swift in Sources */,
+				AC6ACE982C12476F008F722A /* PokerHandStats.swift in Sources */,
 				AC1DE5322C060FEE00D90910 /* PokerOddsCalculator.swift in Sources */,
 				AC854F232C04D589006503BD /* ObjectDetectorDEFAULT.mlmodel in Sources */,
 				FAD500A11ED668B60074D713 /* ViewController.swift in Sources */,
 				FAD5009F1ED668B60074D713 /* AppDelegate.swift in Sources */,
 				FA68723920AA028000D82F25 /* ObjectDetector.mlmodel in Sources */,
-				AC854F2F2C04FEA6006503BD /* PauseViewController.swift in Sources */,
+				AC854F2F2C04FEA6006503BD /* CameraViewController.swift in Sources */,
+				AC6ACE962C123DA6008F722A /* OddsCalculator.swift in Sources */,
 				AC5713F42C0525E000168123 /* Card.swift in Sources */,
-				AC9385532C083F2700687FAE /* PokerGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

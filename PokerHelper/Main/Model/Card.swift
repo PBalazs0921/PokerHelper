@@ -10,7 +10,7 @@ import Foundation
 
 class Card:Codable {
     let code: String
-    //need to add an image for the UI
+    //let image: UIImage
     
     init(code: String) {
         self.code = code
