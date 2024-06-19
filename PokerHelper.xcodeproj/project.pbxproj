@@ -19,6 +19,7 @@
 		ACAB9CCD2C0766550093EB01 /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = ACAB9CCC2C0766550093EB01 /* test.js */; };
 		ACAB9CE52C07A4320093EB01 /* bundle.js in Resources */ = {isa = PBXBuildFile; fileRef = ACAB9CE42C07A4320093EB01 /* bundle.js */; };
 		ACAB9CE72C07A6BC0093EB01 /* bundle2.js in Resources */ = {isa = PBXBuildFile; fileRef = ACAB9CE62C07A6BC0093EB01 /* bundle2.js */; };
+		ACED88A52C1C970F0041971A /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACED88A42C1C970F0041971A /* GameData.swift */; };
 		ACF732992C070D8C00B9C43D /* testbundle.js in Resources */ = {isa = PBXBuildFile; fileRef = AC428C992C070BD200996D5B /* testbundle.js */; };
 		ACF7329B2C073E5800B9C43D /* omp in Resources */ = {isa = PBXBuildFile; fileRef = ACF7329A2C073E5800B9C43D /* omp */; };
 		FA4750CA20BF3F48003E19ED /* Breakfast Finder Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4750C920BF3F48003E19ED /* Breakfast Finder Logo.png */; };
@@ -46,6 +47,7 @@
 		ACAB9CCC2C0766550093EB01 /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = test.js; path = PokerHelper/test.js; sourceTree = SOURCE_ROOT; };
 		ACAB9CE42C07A4320093EB01 /* bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bundle.js; sourceTree = "<group>"; };
 		ACAB9CE62C07A6BC0093EB01 /* bundle2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bundle2.js; sourceTree = "<group>"; };
+		ACED88A42C1C970F0041971A /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		ACF7329A2C073E5800B9C43D /* omp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = omp; sourceTree = "<group>"; };
 		ACF7329C2C073EEC00B9C43D /* EquityCalculatorWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EquityCalculatorWrapper.h; sourceTree = "<group>"; };
 		C2A2AB60C2A2AB2000000001 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				AC5713F32C0525E000168123 /* Card.swift */,
 				AC6ACE972C12476F008F722A /* PokerHandStats.swift */,
 				AC6ACE992C12478F008F722A /* HandChance.swift */,
+				ACED88A42C1C970F0041971A /* GameData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				FAB417F62099308400494E9C /* MenuViewController.swift in Sources */,
 				AC6ACE9A2C12478F008F722A /* HandChance.swift in Sources */,
 				AC6ACE982C12476F008F722A /* PokerHandStats.swift in Sources */,
+				ACED88A52C1C970F0041971A /* GameData.swift in Sources */,
 				AC1DE5322C060FEE00D90910 /* PokerOddsCalculator.swift in Sources */,
 				AC854F232C04D589006503BD /* ObjectDetectorDEFAULT.mlmodel in Sources */,
 				FAD500A11ED668B60074D713 /* ViewController.swift in Sources */,

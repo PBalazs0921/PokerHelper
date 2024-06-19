@@ -9,23 +9,17 @@ class CameraViewController: UIViewController {
     private var cards: [Card] = []
     
     var HandStats: PokerHandStats?
+    var statsLabel: UILabel!
     
     func setup(card: Card) {
         let instance = cards
-        test.text = instance.description
+        test.text = nil
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let backButton = UIButton(type: .system)
-        backButton.setTitle("Back", for: .normal)
-        backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
-        
-        // Set button frame and add it to the view
-        backButton.frame = CGRect(x: 20, y: 40, width: 60, height: 30)
-        view.addSubview(backButton)
-        
+        setupUI()
+
     }
     
     
@@ -33,10 +27,44 @@ class CameraViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    func calculateOddsTemp(c1: String, c2:String)-> PokerHandStats?{
-        HandStats = calculateOdds(card1: c1, card2: c2)
-        
+    func calculateOddsTemp(c1: String, c2:String, board boardInputParam:[String] = [])-> PokerHandStats?{
+        HandStats = calculateOdds(card1: c1, card2: c2, board: boardInputParam)
         return HandStats
+    }
+    
+    //Update the string to display
+    func displayStats(_ gameData: GameData) {
+        let totalIterations = gameData.count
+        var statsText = "Hand: \(gameData.handCards[0].code), \(gameData.handCards[1].code)\n"
+        if(gameData.boardCards.count)>0{
+            statsText+="Board:"
+            for bc in gameData.boardCards{
+                statsText+=" \(bc.code)"
+            }
+            statsText+="\n"
+        }
+        for handChance in gameData.handChances {
+            statsText += handChance.toString() + "\n"
+        }
+        
+        statsLabel.text = statsText
+        view.setNeedsLayout() // Update layout
+    }
+    
+    func setupUI() {
+        // Initialize the statsLabel
+        statsLabel = UILabel()
+        statsLabel.numberOfLines = 0 // Allow multiple lines
+        statsLabel.textAlignment = .left
+        statsLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(statsLabel)
+        
+        // Set constraints for statsLabel
+        NSLayoutConstraint.activate([
+            statsLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),
+            statsLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            statsLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+        ])
     }
 
 

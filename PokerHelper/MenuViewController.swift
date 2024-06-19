@@ -12,7 +12,9 @@ class MenuViewController: ViewController {
     private var requests = [VNRequest]()
     private var testLabel: UILabel!
     private var latestDetectedObjects = [(identifier: String, confidence: VNConfidence)]()
-    var GameData : PokerHandStats?
+    private var Game = GameData()
+    
+
     
     @discardableResult
     func setupVision() -> NSError? {
@@ -116,25 +118,25 @@ class MenuViewController: ViewController {
                 else {
                     let filteredDetectedObjects = filterUniqueDetectedObjects(latestDetectedObjects)
                     // print(filteredDetectedObjects)
-                    if(filteredDetectedObjects.count==2){
-                        print("Detected cards:")
-                        print(filteredDetectedObjects[0].identifier)
-                        print(filteredDetectedObjects[1].identifier)
-                        //second.setup(card: Card(code: latestDetectedObjects.first?.identifier as! String, color: nil, value: nil))
-                        GameData = second.calculateOddsTemp(c1: filteredDetectedObjects[0].identifier, c2: filteredDetectedObjects[1].identifier)
-                        print("The stored data:")
-                        GameData?.setup()
-                        if let gameData = GameData {
-                            for test in gameData.handChances{
-                                print(test.toString())
-                            }
-                        } else {
-                            print("No game data available")
+                    print("COUNT:")
+                    print(filteredDetectedObjects.count)
+                    if(filteredDetectedObjects.count == 2){
+                        print("calcWithHand")
+                        Game.calculateOnlyHand(card1: filteredDetectedObjects[0].identifier,card2: filteredDetectedObjects[1].identifier)
+                        print(Game.handChances)
+                    }else if(filteredDetectedObjects.count>2){
+                        
+                        var tempArray = [String]()
+                        for temp in filteredDetectedObjects{
+                            tempArray.append(temp.identifier)
                         }
+                        print("CalcWithBoard")
+                        Game.calculateWithBoard(inputboard: tempArray)
                     }
 
+
                 }
-           
+            second.displayStats(Game)
             self.present(second, animated: true,completion: nil)
             
         } else {

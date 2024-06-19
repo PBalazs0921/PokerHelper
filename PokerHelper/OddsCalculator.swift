@@ -31,25 +31,11 @@ private func runJavaScriptFunction(hands: [[String]],board: [String] = []) -> Po
             // Call the JavaScript function with parameters
             if let result = getStringFunction.call(withArguments: [hands, board, iterations, exhaustive]) {
                 // Convert the result to a JSON string
-                print("Calculation Results:")
-                print(result)
-                print("JSON conversion:")
                 // Convert the JSON string to Data
                 if let jsonData = result.toString().data(using: .utf8) {
                     do {
                         // Decode the JSON data to an array of PokerHandStats
                         let pokerHandStats = try JSONDecoder().decode([PokerHandStats].self, from: jsonData)
-                        // Access the parsed data
-                        for stat in pokerHandStats {
-                            //print("Hand: \(stat.hand)")
-                            //print("Count: \(stat.count)")
-                            //print("Wins: \(stat.wins)")
-                            //print("Ties: \(stat.ties)")
-                            //print("Favourite: \(stat.favourite)")
-                            //for handChance in stat.handChances {
-                             //   print("Hand Chance - Name: \(handChance.name), Count: \(handChance.count)")
-                            //}
-                        }
                         return pokerHandStats[0]
                     } catch {
                         print("Failed to decode JSON: \(error.localizedDescription)")

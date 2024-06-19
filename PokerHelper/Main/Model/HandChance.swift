@@ -18,14 +18,7 @@ class HandChance: Codable {
         self.count = count
     }
     
-    //The API returns chances, we need percentages, conversion:
-    func calculatePercentage(totalIterations: Int) {
-        guard totalIterations > 0 else {
-            self.percentage = 0
-            return
-        }
-        self.percentage = (Double(count) / Double(totalIterations)) * 100.0
-    }
+
     
     func toString()-> String{
         let percentageString = String(format: "%.2f", self.percentage ?? 0.0)
