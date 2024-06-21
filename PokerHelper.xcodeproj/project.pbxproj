@@ -21,7 +21,6 @@
 		ACAB9CE72C07A6BC0093EB01 /* bundle2.js in Resources */ = {isa = PBXBuildFile; fileRef = ACAB9CE62C07A6BC0093EB01 /* bundle2.js */; };
 		ACED88A52C1C970F0041971A /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACED88A42C1C970F0041971A /* GameData.swift */; };
 		ACF732992C070D8C00B9C43D /* testbundle.js in Resources */ = {isa = PBXBuildFile; fileRef = AC428C992C070BD200996D5B /* testbundle.js */; };
-		ACF7329B2C073E5800B9C43D /* omp in Resources */ = {isa = PBXBuildFile; fileRef = ACF7329A2C073E5800B9C43D /* omp */; };
 		FA4750CA20BF3F48003E19ED /* Breakfast Finder Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4750C920BF3F48003E19ED /* Breakfast Finder Logo.png */; };
 		FA68723920AA028000D82F25 /* ObjectDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FA68723820AA028000D82F25 /* ObjectDetector.mlmodel */; };
 		FAB417F62099308400494E9C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB417F52099308400494E9C /* MenuViewController.swift */; };
@@ -48,7 +47,6 @@
 		ACAB9CE42C07A4320093EB01 /* bundle.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bundle.js; sourceTree = "<group>"; };
 		ACAB9CE62C07A6BC0093EB01 /* bundle2.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bundle2.js; sourceTree = "<group>"; };
 		ACED88A42C1C970F0041971A /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
-		ACF7329A2C073E5800B9C43D /* omp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = omp; sourceTree = "<group>"; };
 		ACF7329C2C073EEC00B9C43D /* EquityCalculatorWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EquityCalculatorWrapper.h; sourceTree = "<group>"; };
 		C2A2AB60C2A2AB2000000001 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E3CB966204CD821C6969C2A3 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 			children = (
 				ACAB9CCF2C07794F0093EB01 /* PokerOddsSwiftConverted */,
 				ACAB9CCE2C0767980093EB01 /* JS */,
-				ACF7329A2C073E5800B9C43D /* omp */,
 				AC854F332C04FFEC006503BD /* Pause */,
 				AC854F322C04FFDF006503BD /* Main */,
 				AC854F302C04FEEB006503BD /* UIViewController.swift */,
@@ -251,7 +248,6 @@
 				FAD500A91ED668B60074D713 /* LaunchScreen.storyboard in Resources */,
 				FAD500A61ED668B60074D713 /* Assets.xcassets in Resources */,
 				FAD500A41ED668B60074D713 /* Main.storyboard in Resources */,
-				ACF7329B2C073E5800B9C43D /* omp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

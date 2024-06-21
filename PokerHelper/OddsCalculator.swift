@@ -77,3 +77,12 @@ func calculateOdds(card1 c1: String, card2 c2:String, board boardInputParam:[Str
     return runJavaScriptFunction(hands: handin,board: boardInputParam)
 }
 
+func calculateResult(handIn: [[String]],boardIn: [String]) -> String{
+    
+    var temp = runJavaScriptFunction(hands: handIn,board:boardIn)
+    if(temp != nil){
+        return "WinnerHandTEMP"
+    } else {
+        return "IncorrectCalculation"
+    }
+}
